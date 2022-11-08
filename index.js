@@ -45,4 +45,4 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
 // app.listen(port, () => console.log(`El servidor está funcionando 🚀 en http://localhost:${port}`))
-app.listen(port, () => console.log(`El servidor está funcionando 🚀 en el puerto ${port}`));
+app.listen(port, () => console.log(`El servidor está funcionando 🚀 en el puerto http://${process.env.LOCALHOST}:${port}`));
