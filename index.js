@@ -44,4 +44,5 @@ app.use(express.urlencoded({ extended: true }));
 // Roting
 app.use('/', router);
 
-app.listen(port, () => console.log(`El servidor está funcionando 🚀 en http://localhost:${port}`))
+// app.listen(port, () => console.log(`El servidor está funcionando 🚀 en http://localhost:${port}`))
+app.listen(port, () => console.log(`El servidor está funcionando 🚀 en el puerto ${port}`));
