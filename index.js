@@ -5,7 +5,7 @@ Las funciones de middleware son funciones que tienen acceso al objeto de solicit
 
 https://expressjs.com/es/guide/using-middleware.html
 
-start -> npm run dev
+dev start -> npm run dev
 */
 
 // const express = require('express'); --> old commonJS
@@ -21,7 +21,9 @@ db.authenticate()
     .catch(error => console.log(error));
 
 // Puerto
-const port = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
+const LOCALHOST = process.env.LOCALHOST || localhost;
+
 
 // Public folder access
 app.use(express.static('public'));
@@ -45,4 +47,4 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
 // app.listen(port, () => console.log(`El servidor está funcionando 🚀 en http://localhost:${port}`))
-app.listen(port, () => console.log(`El servidor está funcionando 🚀 en el puerto http://${process.env.LOCALHOST}:${port}, ${$PORT}`));
+app.listen(PORT, () => console.log(`El servidor está funcionando 🚀 en el puerto http://${LOCALHOST}:${PORT}`));
